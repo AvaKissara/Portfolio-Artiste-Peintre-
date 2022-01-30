@@ -1,0 +1,777 @@
+/*ver 0.2*/
+
+@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&family=Nanum+Brush+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+img,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+em {
+  font-weight: bold;
+}
+
+/*Navigation Bar*/
+.nav {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5.5vh;
+  width: 100%;
+  padding: 2rem 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav .baner {
+  height: 9rem;
+  width: 9rem;
+  margin-left: 0.3rem;
+  margin-top: 0.1rem;
+}
+
+.nav .burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.nav .burger div {
+  background-color: rgb(3, 10, 114);
+  height: 3px;
+  width: 20px;
+  margin: 2px 0;
+}
+
+.nav .nav-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Nanum Brush Script", cursive;
+  font-size: 2.5rem;
+  list-style-type: none;
+  font-weight: bold;
+}
+
+.nav .nav-list .nav-item {
+  margin: 0 2rem;
+}
+
+.nav .nav-list .nav-item a {
+  color: rgb(3, 10, 114);
+  transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.nav .nav-list .nav-item a:hover {
+  color: #f02c2c;
+}
+
+/*Navigation Bar End */
+
+/*Header*/
+header {
+  scroll-snap-align: start;
+  position: relative;
+  height: 100vh;
+  /*width: 100vw;*/
+  border-bottom: 3px solid rgba(62, 54, 54, 0.6);
+}
+
+header .overlay {
+  position: absolute;
+  background-color: black;
+  opacity: 0.2;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+}
+
+header .showcase {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-image: url(../images/baner2.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .showcase .showcase-text {
+  padding: 0 1rem;
+  text-align: center;
+  z-index: 5;
+  font-weight: 400;
+  color: #f5eded;
+  font-family: "Calligraffitti", cursive;
+}
+
+header .showcase .showcase-text h1 {
+  transform: translateY(-2vh);
+  opacity: 0;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+header .showcase .showcase-text h3 {
+  transform: translateY(3vh);
+  opacity: 0;
+  font-size: 1.8rem;
+  font-style: italic;
+}
+/*Header End*/
+
+/*About*/
+.about .container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 1rem;
+  grid-column-gap: 3rem;
+  margin: 8% 40% 10% 8%;
+  box-shadow: 0 1em 1em -1em rgba(0, 0, 0, 0.25);
+}
+.about .profil img {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.text {
+  color: rgb(3, 10, 114);
+  font-family: "Poppins", sans-serif;
+}
+/*About End*/
+
+/*Section1 - Paintings*/
+.paintings .container {
+  max-width: 1500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.paintings .section-title {
+  color: rgb(3, 10, 114);
+  margin: 7rem 0 8rem;
+  text-transform: uppercase;
+  font-family: "Nanum Brush Script", cursive;
+  font-size: 5rem;
+  font-weight: bold;
+}
+.paintings .title {
+  color: rgb(3, 10, 114);
+  font-family: "Calligraffitti", cursive;
+  font-size: 2.3rem;
+  text-align: left;
+  text-decoration: underline overline;
+  margin: 8.5rem 0.7rem 1rem;
+}
+.paintings .serie {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 0.5rem;
+  grid-row-gap: 2.5rem;
+  margin-bottom: 7%;
+}
+.paintings .gallery {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  padding: 0.5rem;
+}
+.paintings .image .last {
+  width: 170%;
+  height: 99%;
+}
+.paintings .image {
+  width: 98.5%;
+  height: 99%;
+}
+.paintings .image img {
+  width: 98.5%;
+  height: 99%;
+}
+.paintings .image img span {
+  width: 80%;
+  overflow: hidden;
+}
+.paintings .image img:hover {
+  -webkit-transform: scale(1.03, 1.03);
+  transform: scale(1.03, 1.03);
+}
+.preview-box {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  height: 350px;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 3px;
+  padding: 0 5px 10px 5px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+}
+.preview-box.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+.preview-box .details {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  justify-content: space-between;
+  max-height: 100px;
+}
+.preview-box .details .title {
+  display: flex;
+  font-size: 18px;
+  font-weight: 300;
+  visibility: hidden;
+}
+.details .title p {
+  margin: 0 5px;
+  visibility: hidden;
+}
+.details .title .current-img {
+  font-weight: 500;
+  visibility: hidden;
+}
+.details .icon {
+  color: #ffffff;
+  font-size: 35px;
+  cursor: pointer;
+}
+.preview-box .image-box {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.image-box .slide {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  height: 30px;
+  width: 60px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 3px;
+}
+.slide.prev {
+  left: -12px;
+  font-size: 40px;
+}
+.slide.next {
+  right: -12px;
+  font-size: 40px;
+}
+.image-box img {
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+}
+.shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  display: none;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/*Section1 - Paintings End*/
+
+/*Section2 - Exhibitions*/
+.exhibitions .container {
+  max-width: 1500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.exhibitions .section-title {
+  color: rgb(3, 10, 114);
+  margin: 14rem 0 5rem;
+  text-transform: uppercase;
+  font-family: "Nanum Brush Script", cursive;
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+.exhibitions .grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 8px;
+  grid-column-gap: 5rem;
+}
+.exhibitions .grid-container > div {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.exhibitions .grid-container .item1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+/*Exhibitions Ends*/
+
+/*Contact*/
+.contact .container {
+  display: block;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: rgb(3, 10, 114);
+}
+
+.contact .section-title {
+  margin: 14rem 0 3rem;
+  font-weight: bold;
+  font-family: "Nanum Brush Script", cursive;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+}
+
+.contact .contact-form #error_message {
+  color: #d72323;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.contact .contact-form input,
+.contact .contact-form textarea::placeholder {
+  font-size: 1rem;
+  font-family: "Fjalla One", sans-serif;
+}
+
+.contact .contact-form input,
+.contact .contact-form textarea {
+  border: 1px solid rgb(3, 10, 114);
+  width: 50%;
+  padding: 0.8rem;
+  resize: vertical;
+  margin: 1rem 0;
+}
+
+.contact .contact-form .spam-filter {
+  margin-top: 1rem;
+}
+
+.contact .contact-form button {
+  text-align: center;
+  display: inline-block;
+  width: 6rem;
+  padding: 0.7rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  margin: 2rem 1rem 0 0;
+  background-color: #bb1f1f;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.contact .contact-form .active {
+  display: block;
+}
+/*Contact End*/
+
+/* Footer*/
+footer {
+  position: sticky;
+  z-index: 10;
+  padding: 1rem;
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: rgb(3, 8, 78);
+  font-family: "Nanum Brush Script", cursive;
+  font-size: 1.5rem;
+  height: 11vh;
+  margin-top: 4.5rem;
+}
+
+footer .title {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+footer .social-media {
+  display: flex;
+}
+
+footer .social span {
+  margin: 1rem;
+  display: none;
+  background-color: #f5eded;
+  color: #3e3636;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+}
+
+footer .social-media ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .social-media li {
+  margin-right: 15px;
+  padding: 14px 13px 2px;
+  text-align: center;
+  width: 20px;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+  list-style-type: none;
+}
+
+footer .social i {
+  font-size: 1.7rem;
+  transition: all 0.6s ease-in-out;
+  cursor: pointer;
+}
+
+footer .social i:hover {
+  transform: scale(1.2);
+}
+/* Footer End*/
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* * {
+    max-width: 480px;
+    overflow: hidden;
+    margin: 0 auto;
+  }*/
+
+  .nav {
+    position: fixed;
+    z-index: 10;
+  }
+  .nav .baner {
+    margin-top: 0.2rem;
+    height: 7.2rem;
+    width: 7.2rem;
+  }
+  .nav .burger {
+    margin-right: 1rem;
+    visibility: visible;
+    z-index: 5;
+    transition: all 0.1 ease;
+  }
+  .nav .burger.close .line1 {
+    transform: rotate(-45deg) translate(-6px, 6px);
+    background-color: #2f23d7;
+    transition: all 0.1s ease;
+  }
+  .nav .burger.close .line2 {
+    opacity: 0;
+    transition: all 0.2s ease;
+  }
+  .nav .burger.close .line3 {
+    transform: rotate(45deg) translate(-4px, -5px);
+    background-color: #2f23d7;
+    transition: all 0s ease;
+  }
+  .nav .nav-list {
+    position: absolute;
+    top: 4vh;
+    right: 0;
+    width: 35%;
+    height: 20vh;
+    flex-direction: column;
+    z-index: 2;
+    transform: translateX(100%);
+    background-color: rgb(255, 255, 255);
+    border: 2px inset;
+    border-color: rgb(139, 142, 173);
+    font-size: 1.9rem;
+    padding: 2rem 0;
+  }
+
+  .nav .nav-list .nav-item {
+    opacity: 0;
+  }
+  .nav .nav-list.active {
+    transform: translateX(0%);
+    transition: all 0.2s ease;
+  }
+
+  .about .container {
+    margin: 3rem 0.5rem;
+    display: block;
+    align-items: center;
+  }
+  .about .profil img {
+    width: 90%;
+    vertical-align: middle;
+    margin: 0 0 1rem 1rem;
+  }
+  .text {
+    color: rgb(3, 10, 114);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.92rem;
+    text-align: justify;
+  }
+
+  .paintings .nouveautés .title {
+    margin: 2rem auto 1.5rem;
+    text-align: center;
+  }
+  .paintings .serie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .paintings .serie .image {
+    width: 70%;
+    width: calc(90% / 1);
+  }
+
+  .paintings .collection .title {
+    margin: 8.5rem auto 2rem;
+    text-align: center;
+  }
+  .paintings .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .paintings .gallery .image {
+    padding: 7px;
+    width: calc(90% / 1);
+  }
+  .paintings .gallery .image span {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .paintings .gallery .image img {
+    width: 100%;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+  }
+  .paintings .image .last {
+    width: 100%;
+  }
+  .preview-box {
+    display: block;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(50%, -50%) scale(0.8);
+    width: 90%;
+  }
+
+  .exhibitions .section-title {
+    margin: 9rem 0 1.5rem;
+  }
+  .exhibitions .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  iframe[src*="youtube"] {
+    display: block;
+    margin: 0;
+    max-width: 100%;
+    padding-bottom: 5px;
+  }
+  .exhibitions .grid-container img {
+    display: block;
+    margin: 0;
+    max-width: 98%;
+    padding-bottom: 5px;
+  }
+
+  .contact .section-title {
+    margin: 5rem auto 2rem;
+  }
+
+  footer {
+    margin: 0 auto 2rem;
+  }
+  footer p {
+    text-align: center;
+  }
+  footer .container .social-media {
+    padding: 0;
+  }
+  footer .container .contact .social ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  footer .container .contact .social .contact-form {
+    margin-top: 0.8rem;
+    border: none;
+  }
+}
+@keyframes linksFadein {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+html,
+body {
+  background: #fff;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
